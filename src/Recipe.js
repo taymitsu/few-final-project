@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import './Recipe.css';
+import './Recipe.css'
 
-function Recipe(props) {
+function Recipe() {
   const[ingredients, setIngredients] = useState(' ')
-  const[recipes, setRecipes] = useState([])
+  const [recipes, setRecipes] = useState([])
   const[data, setData] = useState(null)
   
 
@@ -13,16 +13,13 @@ function Recipe(props) {
     const res = await fetch(path)
     const data = await res.json()
 
-    const recipes = data.results
-
-    //console.log(data);
+    console.log(data);
     
     setRecipes(data.results)
 
     setData({
       ingredients,
       recipes
-      //includeNutrition: data.includeNutriton
     })
   }
 

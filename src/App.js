@@ -5,7 +5,6 @@ function App() {
   return (
     <div className="App">
       What's For Dinner?
-
       <Recipe />
     </div>
     
